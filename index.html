@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Business Intelligence</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body {
+      background: linear-gradient(135deg, #eef4fb 0%, #d9e6f6 100%);
+      min-height: 100vh;
+      color: #1e293b;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 6%;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .brand h1 { font-size: 1.35rem; font-weight: 400; color: #334155; }
+    .brand p { font-size: 1.15rem; font-weight: 700; color: #0f2557; margin-top: 2px; }
+    nav { display: flex; gap: 32px; }
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1d4ed8;
+      font-size: 1rem;
+      transition: opacity 0.2s;
+    }
+    nav a.active { color: #0f2557; font-weight: 700; }
+    nav a:hover { opacity: 0.7; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      padding: 16px 6% 60px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 6px 20px rgba(15, 37, 87, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 26px rgba(15, 37, 87, 0.14);
+    }
+    .card img {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 16px;
+    }
+    .card h2 { font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
+    .card span { font-size: 0.85rem; color: #64748b; margin-bottom: 16px; min-height: 18px; }
+    .btn {
+      display: inline-block;
+      background-color: #0b2265;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 10px 28px;
+      border-radius: 8px;
+      margin-top: auto;
+      transition: background-color 0.2s;
+    }
+    .btn:hover { background-color: #1e40af; }
+    .btn.disabled {
+      background-color: #1e293b;
+      cursor: default;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1>Proyectos de Business Intelligence</h1>
+      <!-- Nombre -->
+      <p>Isabel Rodríguez</p>
+    </div>
+    <nav>
+      <a href="#">INICIO</a>
+      <a href="#proyectos" class="active">Proyectos</a>
+      <!-- CAMBIA AQUÍ POR TU PERFIL DE LINKEDIN -->
+      <a href="https://www.linkedin.com/in/mar%C3%ADa-isabel-rodr%C3%ADguez-beltr%C3%A1n/" target="_blank">LinkedIn</a>
+    </nav>
+  </header>
+
+  <main id="proyectos" class="grid">
+
+    <!-- TARJETA 1: TU PROYECTO ACTUAL -->
+    <article class="card">
+      <!-- Asegúrate de que el nombre coincida con la imagen que subiste -->
+      <img src="retail-dashboard.png" alt="Global Sales Performance Dashboard">
+      <h2>Global Sales Performance & Profitability</h2>
+      <span>Sector Retail | Power BI & DAX</span>
+      <!-- Pega aquí el enlace a tu tablero o repositorio del proyecto -->
+      <a class="btn" href="https://app.powerbi.com/view?r=eyJrIjoiNDc1YzMzMzktMDEwZi00YTIyLWFkNzktZmQwYTU5NWQ3YmRhIiwidCI6ImQ1MTM4OGVmLTZhYjAtNDM2My05Zjk0LWQ1NjY0NGE0NTk3MCIsImMiOjR9" target="_blank">ACCEDER</a>
+    </article>
+
+    <!-- TARJETA 2: EJEMPLO PARA PROYECTO CONFIDENCIAL O PRÓXIMO -->
+    <article class="card">
+      <img src="retail-dashboard.png" alt="Próximo proyecto">
+      <h2>Logística y Abastecimiento (OTIF)</h2>
+      <span>Supply Chain | Próximamente</span>
+      <span class="btn disabled">EN CONSTRUCCIÓN</span>
+    </article>
+
+  </main>
+
+</body>
+</html>
